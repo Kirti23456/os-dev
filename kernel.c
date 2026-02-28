@@ -1,6 +1,9 @@
-void kernel_main(){
-char* vga =(char*)0xB8000;
-vga[0]='k';
-vga[1]=0x0F; //white text on black background
-}
+void kernel_main() {
+    char* video_memory = (char*) 0xb8000;
+    video_memory[0] = 'H';
+    video_memory[1] = 0x0F;
 
+    video_memory[2] = 'i';
+    video_memory[3] =0x0F;
+    while(1);
+}
